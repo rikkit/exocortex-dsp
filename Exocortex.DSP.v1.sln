@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exocortex.DSP.v1", "src\Exocortex.DSP.v1.csproj", "{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFilterDemo", "demos\ImageFilterExample\ImageFilterDemo.csproj", "{C5553FD7-11EF-4121-9A38-7D26A1519C97}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotDemo", "demos\MandelbrotExample\MandelbrotDemo.csproj", "{DFC200D4-60B3-4B82-BE0A-7AE113A084BC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}.Debug.ActiveCfg = Debug|.NET
+		{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}.Debug.Build.0 = Debug|.NET
+		{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}.Release.ActiveCfg = Release|.NET
+		{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}.Release.Build.0 = Release|.NET
+		{C5553FD7-11EF-4121-9A38-7D26A1519C97}.Debug.ActiveCfg = Debug|.NET
+		{C5553FD7-11EF-4121-9A38-7D26A1519C97}.Debug.Build.0 = Debug|.NET
+		{C5553FD7-11EF-4121-9A38-7D26A1519C97}.Release.ActiveCfg = Release|.NET
+		{C5553FD7-11EF-4121-9A38-7D26A1519C97}.Release.Build.0 = Release|.NET
+		{DFC200D4-60B3-4B82-BE0A-7AE113A084BC}.Debug.ActiveCfg = Debug|.NET
+		{DFC200D4-60B3-4B82-BE0A-7AE113A084BC}.Debug.Build.0 = Debug|.NET
+		{DFC200D4-60B3-4B82-BE0A-7AE113A084BC}.Release.ActiveCfg = Release|.NET
+		{DFC200D4-60B3-4B82-BE0A-7AE113A084BC}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
