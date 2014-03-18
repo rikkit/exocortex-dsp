@@ -1,9 +1,9 @@
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
-using Exocortex.DSP;
+using Exocortex.DSP.NET;
 
-namespace ImageFilterApp
+namespace Exocortex.DSP.Demo.ImageFilter
 {
 	/// <summary>
 	/// Summary description for CImage.

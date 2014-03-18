@@ -1,38 +1,38 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>Exocortex.DSP.v1</name>
+        <name>Exocortex.DSP.NET</name>
     </assembly>
     <members>
-        <member name="T:Exocortex.DSP.Complex">
+        <member name="T:Exocortex.DSP.NET.Complex">
             <summary>
             <p>A double-precision complex number representation.</p>
             </summary>
         </member>
-        <member name="F:Exocortex.DSP.Complex.Re">
+        <member name="F:Exocortex.DSP.NET.Complex.Re">
             <summary>
             The real component of the complex number
             </summary>
         </member>
-        <member name="F:Exocortex.DSP.Complex.Im">
+        <member name="F:Exocortex.DSP.NET.Complex.Im">
             <summary>
             The imaginary component of the complex number
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.Complex.#ctor(System.Double,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.#ctor(System.Double,System.Double)">
             <summary>
             Create a complex number from a real and an imaginary component
             </summary>
             <param name="real"></param>
             <param name="imaginary"></param>
         </member>
-        <member name="M:Exocortex.DSP.Complex.#ctor(Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.#ctor(Exocortex.DSP.NET.Complex)">
             <summary>
             Create a complex number based on an existing complex number
             </summary>
             <param name="c"></param>
         </member>
-        <member name="M:Exocortex.DSP.Complex.FromRealImaginary(System.Double,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.FromRealImaginary(System.Double,System.Double)">
             <summary>
             Create a complex number from a real and an imaginary component
             </summary>
@@ -40,7 +40,7 @@
             <param name="imaginary"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.FromModulusArgument(System.Double,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.FromModulusArgument(System.Double,System.Double)">
             <summary>
             Create a complex number from a modulus (length) and an argument (radian)
             </summary>
@@ -48,63 +48,63 @@
             <param name="argument"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.Clone">
+        <member name="M:Exocortex.DSP.NET.Complex.Clone">
             <summary>
             Clone the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.GetModulus">
+        <member name="M:Exocortex.DSP.NET.Complex.GetModulus">
             <summary>
             The modulus (length) of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.GetModulusSquared">
+        <member name="M:Exocortex.DSP.NET.Complex.GetModulusSquared">
             <summary>
             The squared modulus (length^2) of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.GetArgument">
+        <member name="M:Exocortex.DSP.NET.Complex.GetArgument">
             <summary>
             The argument (radians) of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.GetConjugate">
+        <member name="M:Exocortex.DSP.NET.Complex.GetConjugate">
             <summary>
             Get the conjugate of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.Normalize">
+        <member name="M:Exocortex.DSP.NET.Complex.Normalize">
             <summary>
             Scale the complex number to 1.
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Explicit(Exocortex.DSP.ComplexF)~Exocortex.DSP.Complex">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Explicit(Exocortex.DSP.NET.ComplexF)~Exocortex.DSP.NET.Complex">
             <summary>
             Convert to a from double precision complex number to a single precison complex number
             </summary>
             <param name="cF"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Explicit(System.Double)~Exocortex.DSP.Complex">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Explicit(System.Double)~Exocortex.DSP.NET.Complex">
             <summary>
             Convert from a single precision real number to a complex number
             </summary>
             <param name="d"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Explicit(Exocortex.DSP.Complex)~System.Double">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Explicit(Exocortex.DSP.NET.Complex)~System.Double">
             <summary>
             Convert from a single precision complex to a real number
             </summary>
             <param name="c"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Equality(Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Equality(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Are these two complex numbers equivalent?
             </summary>
@@ -112,7 +112,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Inequality(Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Inequality(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Are these two complex numbers different?
             </summary>
@@ -120,41 +120,41 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.GetHashCode">
+        <member name="M:Exocortex.DSP.NET.Complex.GetHashCode">
             <summary>
             Get the hash code of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.Equals(System.Object)">
+        <member name="M:Exocortex.DSP.NET.Complex.Equals(System.Object)">
             <summary>
             Is this complex number equivalent to another object?
             </summary>
             <param name="o"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.CompareTo(System.Object)">
+        <member name="M:Exocortex.DSP.NET.Complex.CompareTo(System.Object)">
             <summary>
             Compare to other complex numbers or real numbers
             </summary>
             <param name="o"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_UnaryPlus(Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_UnaryPlus(Exocortex.DSP.NET.Complex)">
             <summary>
             This operator doesn't do much. :-)
             </summary>
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_UnaryNegation(Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_UnaryNegation(Exocortex.DSP.NET.Complex)">
             <summary>
             Negate the complex number
             </summary>
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Addition(Exocortex.DSP.Complex,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Addition(Exocortex.DSP.NET.Complex,System.Double)">
             <summary>
             Add a complex number to a real
             </summary>
@@ -162,7 +162,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Addition(System.Double,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Addition(System.Double,Exocortex.DSP.NET.Complex)">
             <summary>
             Add a real to a complex number
             </summary>
@@ -170,7 +170,7 @@
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Addition(Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Addition(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Add to complex numbers
             </summary>
@@ -178,7 +178,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Subtraction(Exocortex.DSP.Complex,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Subtraction(Exocortex.DSP.NET.Complex,System.Double)">
             <summary>
             Subtract a real from a complex number
             </summary>
@@ -186,7 +186,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Subtraction(System.Double,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Subtraction(System.Double,Exocortex.DSP.NET.Complex)">
             <summary>
             Subtract a complex number from a real
             </summary>
@@ -194,7 +194,7 @@
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Subtraction(Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Subtraction(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Subtract two complex numbers
             </summary>
@@ -202,7 +202,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Multiply(Exocortex.DSP.Complex,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Multiply(Exocortex.DSP.NET.Complex,System.Double)">
             <summary>
             Multiply a complex number by a real
             </summary>
@@ -210,7 +210,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Multiply(System.Double,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Multiply(System.Double,Exocortex.DSP.NET.Complex)">
             <summary>
             Multiply a real by a complex number
             </summary>
@@ -218,7 +218,7 @@
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Multiply(Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Multiply(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Multiply two complex numbers together
             </summary>
@@ -226,7 +226,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Division(Exocortex.DSP.Complex,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Division(Exocortex.DSP.NET.Complex,System.Double)">
             <summary>
             Divide a complex number by a real number
             </summary>
@@ -234,7 +234,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.op_Division(Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.Complex.op_Division(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Divide a complex number by a complex number
             </summary>
@@ -242,20 +242,20 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.Parse(System.String)">
+        <member name="M:Exocortex.DSP.NET.Complex.Parse(System.String)">
             <summary>
             Parse a complex representation in this fashion: "( %f, %f )"
             </summary>
             <param name="s"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.ToString">
+        <member name="M:Exocortex.DSP.NET.Complex.ToString">
             <summary>
             Get the string representation
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.Complex.IsEqual(Exocortex.DSP.Complex,Exocortex.DSP.Complex,System.Double)">
+        <member name="M:Exocortex.DSP.NET.Complex.IsEqual(Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex,System.Double)">
             <summary>
             Determine whether two complex numbers are almost (i.e. within the tolerance) equivalent.
             </summary>
@@ -264,32 +264,32 @@
             <param name="tolerance"></param>
             <returns></returns>
         </member>
-        <member name="P:Exocortex.DSP.Complex.Zero">
+        <member name="P:Exocortex.DSP.NET.Complex.Zero">
             <summary>
             Represents zero
             </summary>
         </member>
-        <member name="P:Exocortex.DSP.Complex.I">
+        <member name="P:Exocortex.DSP.NET.Complex.I">
             <summary>
             Represents the result of sqrt( -1 )
             </summary>
         </member>
-        <member name="P:Exocortex.DSP.Complex.MaxValue">
+        <member name="P:Exocortex.DSP.NET.Complex.MaxValue">
             <summary>
             Represents the largest possible value of Complex.
             </summary>
         </member>
-        <member name="P:Exocortex.DSP.Complex.MinValue">
+        <member name="P:Exocortex.DSP.NET.Complex.MinValue">
             <summary>
             Represents the smallest possible value of Complex.
             </summary>
         </member>
-        <member name="T:Exocortex.DSP.ComplexArray">
+        <member name="T:Exocortex.DSP.NET.ComplexArray">
             <summary>
             <p>A set of array utilities for complex number arrays</p>
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.ClampLength(Exocortex.DSP.Complex[],System.Double,System.Double)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.ClampLength(Exocortex.DSP.NET.Complex[],System.Double,System.Double)">
             <summary>
             Clamp length (modulus) of the elements in the complex array
             </summary>
@@ -297,7 +297,7 @@
             <param name="fMinimum"></param>
             <param name="fMaximum"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Clamp(Exocortex.DSP.Complex[],Exocortex.DSP.Complex,Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Clamp(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex,Exocortex.DSP.NET.Complex)">
             <summary>
             Clamp elements in the complex array to range [minimum,maximum]
             </summary>
@@ -305,27 +305,27 @@
             <param name="minimum"></param>
             <param name="maximum"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.ClampToRealUnit(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.ClampToRealUnit(Exocortex.DSP.NET.Complex[])">
             <summary>
             Clamp elements in the complex array to real unit range (i.e. [0,1])
             </summary>
             <param name="array"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Shift(Exocortex.DSP.Complex[],System.Int32)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Shift(Exocortex.DSP.NET.Complex[],System.Int32)">
             <summary>
             Shift (offset) the elements in the array
             </summary>
             <param name="array"></param>
             <param name="offset"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Shift(Exocortex.DSP.ComplexF[],System.Int32)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Shift(Exocortex.DSP.NET.ComplexF[],System.Int32)">
             <summary>
             Shift (offset) the elements in the array
             </summary>
             <param name="array"></param>
             <param name="offset"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.GetLengthRange(Exocortex.DSP.Complex[],System.Double@,System.Double@)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.GetLengthRange(Exocortex.DSP.NET.Complex[],System.Double@,System.Double@)">
             <summary>
             Get the range of element lengths
             </summary>
@@ -333,7 +333,7 @@
             <param name="minimum"></param>
             <param name="maximum"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.GetLengthRange(Exocortex.DSP.ComplexF[],System.Single@,System.Single@)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.GetLengthRange(Exocortex.DSP.NET.ComplexF[],System.Single@,System.Single@)">
             <summary>
             Get the range of element lengths
             </summary>
@@ -341,7 +341,7 @@
             <param name="minimum"></param>
             <param name="maximum"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.IsEqual(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[],System.Double)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.IsEqual(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[],System.Double)">
             <summary>
             Determine whether the elements in the two arrays are the same
             </summary>
@@ -350,7 +350,7 @@
             <param name="tolerance"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.IsEqual(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[],System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.IsEqual(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[],System.Single)">
             <summary>
              Determine whether the elements in the two arrays are the same
             </summary>
@@ -359,42 +359,42 @@
             <param name="tolerance"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Offset(Exocortex.DSP.Complex[],System.Double)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Offset(Exocortex.DSP.NET.Complex[],System.Double)">
             <summary>
             Add a specific value to each element in the array
             </summary>
             <param name="array"></param>
             <param name="offset"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Offset(Exocortex.DSP.Complex[],Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Offset(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex)">
             <summary>
             Add a specific value to each element in the array
             </summary>
             <param name="array"></param>
             <param name="offset"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Offset(Exocortex.DSP.ComplexF[],System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Offset(Exocortex.DSP.NET.ComplexF[],System.Single)">
             <summary>
             Add a specific value to each element in the array
             </summary>
             <param name="array"></param>
             <param name="offset"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Offset(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Offset(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF)">
             <summary>
             Add a specific value to each element in the array
             </summary>
             <param name="array"></param>
             <param name="offset"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.Complex[],System.Double)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.Complex[],System.Double)">
             <summary>
             Multiply each element in the array by a specific value
             </summary>
             <param name="array"></param>
             <param name="scale"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.Complex[],System.Double,System.Int32,System.Int32)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.Complex[],System.Double,System.Int32,System.Int32)">
             <summary>
              Multiply each element in the array by a specific value
             </summary>
@@ -403,14 +403,14 @@
             <param name="start"></param>
             <param name="length"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.Complex[],Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex)">
             <summary>
             Multiply each element in the array by a specific value
             </summary>
             <param name="array"></param>
             <param name="scale"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.Complex[],Exocortex.DSP.Complex,System.Int32,System.Int32)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex,System.Int32,System.Int32)">
             <summary>
             Multiply each element in the array by a specific value 
             </summary>
@@ -419,14 +419,14 @@
             <param name="start"></param>
             <param name="length"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.ComplexF[],System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.ComplexF[],System.Single)">
             <summary>
             Multiply each element in the array by a specific value
             </summary>
             <param name="array"></param>
             <param name="scale"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.ComplexF[],System.Single,System.Int32,System.Int32)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.ComplexF[],System.Single,System.Int32,System.Int32)">
             <summary>
             Multiply each element in the array by a specific value 
             </summary>
@@ -435,14 +435,14 @@
             <param name="start"></param>
             <param name="length"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF)">
             <summary>
             Multiply each element in the array by a specific value
             </summary>
             <param name="array"></param>
             <param name="scale"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Scale(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF,System.Int32,System.Int32)">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Scale(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF,System.Int32,System.Int32)">
             <summary>
             Multiply each element in the array by a specific value 
             </summary>
@@ -451,14 +451,14 @@
             <param name="start"></param>
             <param name="length"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Multiply(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Multiply(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[])">
             <summary>
             Multiply each element in target array with corresponding element in rhs array
             </summary>
             <param name="target"></param>
             <param name="rhs"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Multiply(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[],Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Multiply(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[])">
             <summary>
             Multiply each element in lhs array with corresponding element in rhs array and
             put product in result array
@@ -467,14 +467,14 @@
             <param name="rhs"></param>
             <param name="result"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Multiply(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Multiply(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Multiply each element in target array with corresponding element in rhs array
             </summary>
             <param name="target"></param>
             <param name="rhs"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Multiply(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Multiply(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Multiply each element in lhs array with corresponding element in rhs array and
             put product in result array
@@ -483,14 +483,14 @@
             <param name="rhs"></param>
             <param name="result"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Divide(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Divide(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[])">
             <summary>
             Divide each element in target array with corresponding element in rhs array
             </summary>
             <param name="target"></param>
             <param name="rhs"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Divide(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[],Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Divide(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[])">
             <summary>
             Divide each element in lhs array with corresponding element in rhs array and
             put product in result array
@@ -499,14 +499,14 @@
             <param name="rhs"></param>
             <param name="result"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Divide(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Divide(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Divide each element in target array with corresponding element in rhs array
             </summary>
             <param name="target"></param>
             <param name="rhs"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Divide(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Divide(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Divide each element in lhs array with corresponding element in rhs array and
             put product in result array
@@ -515,81 +515,81 @@
             <param name="rhs"></param>
             <param name="result"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Copy(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Copy(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[])">
             <summary>
             Copy an array
             </summary>
             <param name="dest"></param>
             <param name="source"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Copy(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Copy(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Copy an array
             </summary>
             <param name="dest"></param>
             <param name="source"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Reverse(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Reverse(Exocortex.DSP.NET.Complex[])">
             <summary>
             Reverse the elements in the array
             </summary>
             <param name="array"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Normalize(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Normalize(Exocortex.DSP.NET.Complex[])">
             <summary>
             Scale and offset the elements in the array so that the
             overall range is [0, 1]
             </summary>
             <param name="array"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Normalize(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Normalize(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Scale and offset the elements in the array so that the
             overall range is [0, 1]
             </summary>
             <param name="array"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Invert(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Invert(Exocortex.DSP.NET.Complex[])">
             <summary>
             Invert each element in the array
             </summary>
             <param name="array"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexArray.Invert(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexArray.Invert(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Invert each element in the array
             </summary>
             <param name="array"></param>
         </member>
-        <member name="T:Exocortex.DSP.ComplexF">
+        <member name="T:Exocortex.DSP.NET.ComplexF">
             <summary>
             <p>A single-precision complex number representation.</p>
             </summary>
         </member>
-        <member name="F:Exocortex.DSP.ComplexF.Re">
+        <member name="F:Exocortex.DSP.NET.ComplexF.Re">
             <summary>
             The real component of the complex number
             </summary>
         </member>
-        <member name="F:Exocortex.DSP.ComplexF.Im">
+        <member name="F:Exocortex.DSP.NET.ComplexF.Im">
             <summary>
             The imaginary component of the complex number
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.#ctor(System.Single,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.#ctor(System.Single,System.Single)">
             <summary>
             Create a complex number from a real and an imaginary component
             </summary>
             <param name="real"></param>
             <param name="imaginary"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.#ctor(Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.#ctor(Exocortex.DSP.NET.ComplexF)">
             <summary>
             Create a complex number based on an existing complex number
             </summary>
             <param name="c"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.FromRealImaginary(System.Single,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.FromRealImaginary(System.Single,System.Single)">
             <summary>
             Create a complex number from a real and an imaginary component
             </summary>
@@ -597,7 +597,7 @@
             <param name="imaginary"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.FromModulusArgument(System.Single,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.FromModulusArgument(System.Single,System.Single)">
             <summary>
             Create a complex number from a modulus (length) and an argument (radian)
             </summary>
@@ -605,63 +605,63 @@
             <param name="argument"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.Clone">
+        <member name="M:Exocortex.DSP.NET.ComplexF.Clone">
             <summary>
             Clone the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.GetModulus">
+        <member name="M:Exocortex.DSP.NET.ComplexF.GetModulus">
             <summary>
             The modulus (length) of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.GetModulusSquared">
+        <member name="M:Exocortex.DSP.NET.ComplexF.GetModulusSquared">
             <summary>
             The squared modulus (length^2) of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.GetArgument">
+        <member name="M:Exocortex.DSP.NET.ComplexF.GetArgument">
             <summary>
             The argument (radians) of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.GetConjugate">
+        <member name="M:Exocortex.DSP.NET.ComplexF.GetConjugate">
             <summary>
             Get the conjugate of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.Normalize">
+        <member name="M:Exocortex.DSP.NET.ComplexF.Normalize">
             <summary>
             Scale the complex number to 1.
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Explicit(Exocortex.DSP.Complex)~Exocortex.DSP.ComplexF">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Explicit(Exocortex.DSP.NET.Complex)~Exocortex.DSP.NET.ComplexF">
             <summary>
             Convert to a from double precision complex number to a single precison complex number
             </summary>
             <param name="c"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Explicit(System.Single)~Exocortex.DSP.ComplexF">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Explicit(System.Single)~Exocortex.DSP.NET.ComplexF">
             <summary>
             Convert from a single precision real number to a complex number
             </summary>
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Explicit(Exocortex.DSP.ComplexF)~System.Single">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Explicit(Exocortex.DSP.NET.ComplexF)~System.Single">
             <summary>
             Convert from a single precision complex to a real number
             </summary>
             <param name="c"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Equality(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Equality(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Are these two complex numbers equivalent?
             </summary>
@@ -669,7 +669,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Inequality(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Inequality(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Are these two complex numbers different?
             </summary>
@@ -677,41 +677,41 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.GetHashCode">
+        <member name="M:Exocortex.DSP.NET.ComplexF.GetHashCode">
             <summary>
             Get the hash code of the complex number
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.Equals(System.Object)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.Equals(System.Object)">
             <summary>
             Is this complex number equivalent to another object?
             </summary>
             <param name="o"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.CompareTo(System.Object)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.CompareTo(System.Object)">
             <summary>
             Compare to other complex numbers or real numbers
             </summary>
             <param name="o"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_UnaryPlus(Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_UnaryPlus(Exocortex.DSP.NET.ComplexF)">
             <summary>
             This operator doesn't do much. :-)
             </summary>
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_UnaryNegation(Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_UnaryNegation(Exocortex.DSP.NET.ComplexF)">
             <summary>
             Negate the complex number
             </summary>
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Addition(Exocortex.DSP.ComplexF,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Addition(Exocortex.DSP.NET.ComplexF,System.Single)">
             <summary>
             Add a complex number to a real
             </summary>
@@ -719,7 +719,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Addition(System.Single,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Addition(System.Single,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Add a real to a complex number
             </summary>
@@ -727,7 +727,7 @@
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Addition(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Addition(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Add to complex numbers
             </summary>
@@ -735,7 +735,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Subtraction(Exocortex.DSP.ComplexF,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Subtraction(Exocortex.DSP.NET.ComplexF,System.Single)">
             <summary>
             Subtract a real from a complex number
             </summary>
@@ -743,7 +743,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Subtraction(System.Single,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Subtraction(System.Single,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Subtract a complex number from a real
             </summary>
@@ -751,7 +751,7 @@
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Subtraction(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Subtraction(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Subtract two complex numbers
             </summary>
@@ -759,7 +759,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Multiply(Exocortex.DSP.ComplexF,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Multiply(Exocortex.DSP.NET.ComplexF,System.Single)">
             <summary>
             Multiply a complex number by a real
             </summary>
@@ -767,7 +767,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Multiply(System.Single,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Multiply(System.Single,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Multiply a real by a complex number
             </summary>
@@ -775,7 +775,7 @@
             <param name="a"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Multiply(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Multiply(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Multiply two complex numbers together
             </summary>
@@ -783,7 +783,7 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Division(Exocortex.DSP.ComplexF,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Division(Exocortex.DSP.NET.ComplexF,System.Single)">
             <summary>
             Divide a complex number by a real number
             </summary>
@@ -791,7 +791,7 @@
             <param name="f"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.op_Division(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.op_Division(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF)">
             <summary>
             Divide a complex number by a complex number
             </summary>
@@ -799,20 +799,20 @@
             <param name="b"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.Parse(System.String)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.Parse(System.String)">
             <summary>
             Parse a complex representation in this fashion: "( %f, %f )"
             </summary>
             <param name="s"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.ToString">
+        <member name="M:Exocortex.DSP.NET.ComplexF.ToString">
             <summary>
             Get the string representation
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexF.IsEqual(Exocortex.DSP.ComplexF,Exocortex.DSP.ComplexF,System.Single)">
+        <member name="M:Exocortex.DSP.NET.ComplexF.IsEqual(Exocortex.DSP.NET.ComplexF,Exocortex.DSP.NET.ComplexF,System.Single)">
             <summary>
             Determine whether two complex numbers are almost (i.e. within the tolerance) equivalent.
             </summary>
@@ -821,60 +821,60 @@
             <param name="tolerance"></param>
             <returns></returns>
         </member>
-        <member name="P:Exocortex.DSP.ComplexF.Zero">
+        <member name="P:Exocortex.DSP.NET.ComplexF.Zero">
             <summary>
             Represents zero
             </summary>
         </member>
-        <member name="P:Exocortex.DSP.ComplexF.I">
+        <member name="P:Exocortex.DSP.NET.ComplexF.I">
             <summary>
             Represents the result of sqrt( -1 )
             </summary>
         </member>
-        <member name="P:Exocortex.DSP.ComplexF.MaxValue">
+        <member name="P:Exocortex.DSP.NET.ComplexF.MaxValue">
             <summary>
             Represents the largest possible value of ComplexF.
             </summary>
         </member>
-        <member name="P:Exocortex.DSP.ComplexF.MinValue">
+        <member name="P:Exocortex.DSP.NET.ComplexF.MinValue">
             <summary>
             Represents the smallest possible value of ComplexF.
             </summary>
         </member>
-        <member name="T:Exocortex.DSP.ComplexMath">
+        <member name="T:Exocortex.DSP.NET.ComplexMath">
             <summary>
             <p>Various mathematical functions for complex numbers.</p>
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.ComplexMath.Swap(Exocortex.DSP.Complex@,Exocortex.DSP.Complex@)">
+        <member name="M:Exocortex.DSP.NET.ComplexMath.Swap(Exocortex.DSP.NET.Complex@,Exocortex.DSP.NET.Complex@)">
             <summary>
             Swap two complex numbers
             </summary>
             <param name="a"></param>
             <param name="b"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexMath.Swap(Exocortex.DSP.ComplexF@,Exocortex.DSP.ComplexF@)">
+        <member name="M:Exocortex.DSP.NET.ComplexMath.Swap(Exocortex.DSP.NET.ComplexF@,Exocortex.DSP.NET.ComplexF@)">
             <summary>
             Swap two complex numbers
             </summary>
             <param name="a"></param>
             <param name="b"></param>
         </member>
-        <member name="M:Exocortex.DSP.ComplexMath.Sqrt(Exocortex.DSP.ComplexF)">
+        <member name="M:Exocortex.DSP.NET.ComplexMath.Sqrt(Exocortex.DSP.NET.ComplexF)">
             <summary>
             Calculate the square root of a complex number
             </summary>
             <param name="c"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexMath.Sqrt(Exocortex.DSP.Complex)">
+        <member name="M:Exocortex.DSP.NET.ComplexMath.Sqrt(Exocortex.DSP.NET.Complex)">
             <summary>
             Calculate the square root of a complex number
             </summary>
             <param name="c"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexMath.Pow(Exocortex.DSP.ComplexF,System.Double)">
+        <member name="M:Exocortex.DSP.NET.ComplexMath.Pow(Exocortex.DSP.NET.ComplexF,System.Double)">
             <summary>
             Calculate the power of a complex number
             </summary>
@@ -882,7 +882,7 @@
             <param name="exponent"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexMath.Pow(Exocortex.DSP.Complex,System.Double)">
+        <member name="M:Exocortex.DSP.NET.ComplexMath.Pow(Exocortex.DSP.NET.Complex,System.Double)">
             <summary>
             Calculate the power of a complex number
             </summary>
@@ -890,82 +890,82 @@
             <param name="exponent"></param>
             <returns></returns>
         </member>
-        <member name="T:Exocortex.DSP.ComplexStats">
+        <member name="T:Exocortex.DSP.NET.ComplexStats">
             <summary>
             <p>A set of statistical utilities for complex number arrays</p>
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.Sum(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.Sum(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Calculate the sum
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.Sum(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.Sum(Exocortex.DSP.NET.Complex[])">
             <summary>
             Calculate the sum
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.SumOfSquares(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.SumOfSquares(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Calculate the sum of squares
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.SumOfSquares(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.SumOfSquares(Exocortex.DSP.NET.Complex[])">
             <summary>
             Calculate the sum of squares
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.Mean(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.Mean(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Calculate the mean (average)
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.Mean(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.Mean(Exocortex.DSP.NET.Complex[])">
             <summary>
             Calculate the mean (average)
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.Variance(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.Variance(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Calculate the variance
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.Variance(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.Variance(Exocortex.DSP.NET.Complex[])">
             <summary>
             Calculate the variance 
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.StdDev(Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.StdDev(Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Calculate the standard deviation
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.StdDev(Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.StdDev(Exocortex.DSP.NET.Complex[])">
             <summary>
             Calculate the standard deviation 
             </summary>
             <param name="data"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.RMSError(Exocortex.DSP.ComplexF[],Exocortex.DSP.ComplexF[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.RMSError(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.ComplexF[])">
             <summary>
             Calculate the root mean squared (RMS) error between two sets of data.
             </summary>
@@ -973,7 +973,7 @@
             <param name="beta"></param>
             <returns></returns>
         </member>
-        <member name="M:Exocortex.DSP.ComplexStats.RMSError(Exocortex.DSP.Complex[],Exocortex.DSP.Complex[])">
+        <member name="M:Exocortex.DSP.NET.ComplexStats.RMSError(Exocortex.DSP.NET.Complex[],Exocortex.DSP.NET.Complex[])">
             <summary>
             Calculate the root mean squared (RMS) error between two sets of data.
             </summary>
@@ -981,12 +981,12 @@
             <param name="beta"></param>
             <returns></returns>
         </member>
-        <member name="T:Exocortex.DSP.Fourier">
+        <member name="T:Exocortex.DSP.NET.Fourier">
             <summary>
             <p>Static functions for doing various Fourier Operations.</p>
             </summary>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT(System.Single[],System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT(System.Single[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D fast Fourier transform of a dataset of complex numbers (as pairs of float's).
             </summary>
@@ -994,7 +994,7 @@
             <param name="length"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT_Quick(System.Single[],System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT_Quick(System.Single[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D fast Fourier transform of a dataset of complex numbers (as pairs of float's).
             </summary>
@@ -1002,7 +1002,7 @@
             <param name="length"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT(Exocortex.DSP.ComplexF[],System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT(Exocortex.DSP.NET.ComplexF[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D fast Fourier transform of a dataset of complex numbers.
             </summary>
@@ -1010,7 +1010,7 @@
             <param name="length"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT_Quick(Exocortex.DSP.ComplexF[],System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT_Quick(Exocortex.DSP.NET.ComplexF[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D fast Fourier transform of a dataset of complex numbers.
             </summary>
@@ -1018,22 +1018,14 @@
             <param name="length"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT(Exocortex.DSP.ComplexF[],Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT(Exocortex.DSP.NET.ComplexF[],Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D fast Fourier transform of a dataset of complex numbers.
             </summary>
             <param name="data"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT(Exocortex.DSP.Complex[],System.Int32,Exocortex.DSP.FourierDirection)">
-            <summary>
-            Compute a 1D fast Fourier transform of a dataset of complex numbers.
-            </summary>
-            <param name="data"></param>
-            <param name="length"></param>
-            <param name="direction"></param>
-        </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT_Quick(Exocortex.DSP.Complex[],System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT(Exocortex.DSP.NET.Complex[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D fast Fourier transform of a dataset of complex numbers.
             </summary>
@@ -1041,14 +1033,22 @@
             <param name="length"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.RFFT(System.Single[],Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT_Quick(Exocortex.DSP.NET.Complex[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
+            <summary>
+            Compute a 1D fast Fourier transform of a dataset of complex numbers.
+            </summary>
+            <param name="data"></param>
+            <param name="length"></param>
+            <param name="direction"></param>
+        </member>
+        <member name="M:Exocortex.DSP.NET.Fourier.RFFT(System.Single[],Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D real-symmetric fast fourier transform.
             </summary>
             <param name="data"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.RFFT(System.Single[],System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.RFFT(System.Single[],System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 1D real-symmetric fast fourier transform.
             </summary>
@@ -1056,7 +1056,7 @@
             <param name="length"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT2(System.Single[],System.Int32,System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT2(System.Single[],System.Int32,System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 2D fast fourier transform on a data set of complex numbers (represented as pairs of floats)
             </summary>
@@ -1065,7 +1065,7 @@
             <param name="yLength"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT2(Exocortex.DSP.ComplexF[],System.Int32,System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT2(Exocortex.DSP.NET.ComplexF[],System.Int32,System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 2D fast fourier transform on a data set of complex numbers
             </summary>
@@ -1074,7 +1074,7 @@
             <param name="yLength"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT2(Exocortex.DSP.Complex[],System.Int32,System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT2(Exocortex.DSP.NET.Complex[],System.Int32,System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 2D fast fourier transform on a data set of complex numbers
             </summary>
@@ -1083,7 +1083,7 @@
             <param name="yLength"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT3(Exocortex.DSP.ComplexF[],System.Int32,System.Int32,System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT3(Exocortex.DSP.NET.ComplexF[],System.Int32,System.Int32,System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 3D fast fourier transform on a data set of complex numbers
             </summary>
@@ -1093,7 +1093,7 @@
             <param name="zLength"></param>
             <param name="direction"></param>
         </member>
-        <member name="M:Exocortex.DSP.Fourier.FFT3(Exocortex.DSP.Complex[],System.Int32,System.Int32,System.Int32,Exocortex.DSP.FourierDirection)">
+        <member name="M:Exocortex.DSP.NET.Fourier.FFT3(Exocortex.DSP.NET.Complex[],System.Int32,System.Int32,System.Int32,Exocortex.DSP.NET.FourierDirection)">
             <summary>
             Compute a 3D fast fourier transform on a data set of complex numbers
             </summary>
@@ -1103,18 +1103,18 @@
             <param name="zLength"></param>
             <param name="direction"></param>
         </member>
-        <member name="T:Exocortex.DSP.FourierDirection">
+        <member name="T:Exocortex.DSP.NET.FourierDirection">
             <summary>
             <p>The direction of the fourier transform.</p>
             </summary>
         </member>
-        <member name="F:Exocortex.DSP.FourierDirection.Forward">
+        <member name="F:Exocortex.DSP.NET.FourierDirection.Forward">
             <summary>
             Forward direction.  Usually in reference to moving from temporal
             representation to frequency representation
             </summary>
         </member>
-        <member name="F:Exocortex.DSP.FourierDirection.Backward">
+        <member name="F:Exocortex.DSP.NET.FourierDirection.Backward">
             <summary>
             Backward direction. Usually in reference to moving from frequency
             representation to temporal representation

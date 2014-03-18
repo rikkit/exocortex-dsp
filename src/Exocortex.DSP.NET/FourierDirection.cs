@@ -30,9 +30,7 @@
  */
 
 
-using System;
-
-namespace Exocortex.DSP
+namespace Exocortex.DSP.NET
 {
 	// Comments? Questions? Bugs? Tell Ben Houston at ben@exocortex.org
 	// Version: May 4, 2002

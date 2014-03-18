@@ -1,14 +1,9 @@
 using System;
-using System.Drawing.Imaging;
 using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
 using System.Windows.Forms;
-using System.Data;
+using Exocortex.DSP.NET;
 
-using Exocortex.DSP;
-
-namespace ImageFilterApp
+namespace Exocortex.DSP.Demo.ImageFilter
 {
 	/// <summary>
 	/// Summary description for ImageFilterApp.

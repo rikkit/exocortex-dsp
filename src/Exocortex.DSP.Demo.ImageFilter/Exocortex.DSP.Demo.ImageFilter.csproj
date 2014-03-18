@@ -9,19 +9,19 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ApplicationIcon>appicon.ico</ApplicationIcon>
     <AssemblyKeyContainerName />
-    <AssemblyName>ImageFilterDemo</AssemblyName>
+    <AssemblyName>Exocortex.DSP.Demo.ImageFilter</AssemblyName>
     <AssemblyOriginatorKeyFile />
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ImageFilterDemo</RootNamespace>
+    <RootNamespace>Exocortex.DSP.Demo.ImageFilter</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject />
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>0.0</OldToolsVersion>
@@ -85,7 +85,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Exocortex.DSP.v1.csproj">
+    <ProjectReference Include="..\Exocortex.DSP.NET\Exocortex.DSP.NET.csproj">
       <Name>Exocortex.DSP.v1</Name>
       <Project>{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}</Project>
       <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
@@ -93,17 +93,11 @@
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
     </Reference>
   </ItemGroup>
   <ItemGroup>

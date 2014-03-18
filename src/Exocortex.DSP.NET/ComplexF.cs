@@ -30,20 +30,18 @@
  */
 
 using System;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-
-namespace Exocortex.DSP {
+namespace Exocortex.DSP.NET {
 
 	// Comments? Questions? Bugs? Tell Ben Houston at ben@exocortex.org
 	// Version: May 4, 2002
 
 	/// <summary>
-	/// <p>A double-precision complex number representation.</p>
+	/// <p>A single-precision complex number representation.</p>
 	/// </summary>
 	[StructLayout(LayoutKind.Sequential)]
-	public struct Complex : IComparable, ICloneable {
+	public struct ComplexF : IComparable, ICloneable {
 
 		//-----------------------------------------------------------------------------------
 		//-----------------------------------------------------------------------------------
@@ -51,12 +49,12 @@ namespace Exocortex.DSP {
 		/// <summary>
 		/// The real component of the complex number
 		/// </summary>
-		public double Re;
+		public float Re;
 
 		/// <summary>
 		/// The imaginary component of the complex number
 		/// </summary>
-		public double Im;
+		public float Im;
 
 		//-----------------------------------------------------------------------------------
 		//-----------------------------------------------------------------------------------
@@ -66,16 +64,16 @@ namespace Exocortex.DSP {
 		/// </summary>
 		/// <param name="real"></param>
 		/// <param name="imaginary"></param>
-		public Complex( double real, double imaginary ) {
-			this.Re		= (double) real;
-			this.Im	= (double) imaginary;
+		public ComplexF( float real, float imaginary ) {
+			this.Re		= (float) real;
+			this.Im	= (float) imaginary;
 		}
 
 		/// <summary>
 		/// Create a complex number based on an existing complex number
 		/// </summary>
 		/// <param name="c"></param>
-		public Complex( Complex c ) {
+		public ComplexF( ComplexF c ) {
 			this.Re		= c.Re;
 			this.Im	= c.Im;
 		}
@@ -86,10 +84,10 @@ namespace Exocortex.DSP {
 		/// <param name="real"></param>
 		/// <param name="imaginary"></param>
 		/// <returns></returns>
-		static public Complex	FromRealImaginary( double real, double imaginary ) {
-			Complex c;
-			c.Re		= (double) real;
-			c.Im = (double) imaginary;
+		static public ComplexF	FromRealImaginary( float real, float imaginary ) {
+			ComplexF c;
+			c.Re		= (float) real;
+			c.Im = (float) imaginary;
 			return c;
 		}
 
@@ -99,10 +97,10 @@ namespace Exocortex.DSP {
 		/// <param name="modulus"></param>
 		/// <param name="argument"></param>
 		/// <returns></returns>
-		static public Complex	FromModulusArgument( double modulus, double argument ) {
-			Complex c;
-			c.Re		= (double)( modulus * System.Math.Cos( argument ) );
-			c.Im	= (double)( modulus * System.Math.Sin( argument ) );
+		static public ComplexF	FromModulusArgument( float modulus, float argument ) {
+			ComplexF c;
+			c.Re		= (float)( modulus * System.Math.Cos( argument ) );
+			c.Im	= (float)( modulus * System.Math.Sin( argument ) );
 			return c;
 		}
 		
@@ -110,14 +108,14 @@ namespace Exocortex.DSP {
 		//-----------------------------------------------------------------------------------
 
 		object	ICloneable.Clone() {
-			return	new Complex( this );
+			return	new ComplexF( this );
 		}
 		/// <summary>
 		/// Clone the complex number
 		/// </summary>
 		/// <returns></returns>
-		public Complex	Clone() {
-			return	new Complex( this );
+		public ComplexF	Clone() {
+			return	new ComplexF( this );
 		}
 		
 		//-----------------------------------------------------------------------------------
@@ -127,28 +125,28 @@ namespace Exocortex.DSP {
 		/// The modulus (length) of the complex number
 		/// </summary>
 		/// <returns></returns>
-		public double	GetModulus() {
-			double	x	= this.Re;
-			double	y	= this.Im;
-			return	(double) Math.Sqrt( x*x + y*y );
+		public float	GetModulus() {
+			float	x	= this.Re;
+			float	y	= this.Im;
+			return	(float) Math.Sqrt( x*x + y*y );
 		}
 
 		/// <summary>
 		/// The squared modulus (length^2) of the complex number
 		/// </summary>
 		/// <returns></returns>
-		public double	GetModulusSquared() {
-			double	x	= this.Re;
-			double	y	= this.Im;
-			return	(double) x*x + y*y;
+		public float	GetModulusSquared() {
+			float	x	= this.Re;
+			float	y	= this.Im;
+			return	(float) x*x + y*y;
 		}
 
 		/// <summary>
 		/// The argument (radians) of the complex number
 		/// </summary>
 		/// <returns></returns>
-		public double	GetArgument() {
-			return (double) Math.Atan2( this.Im, this.Re );
+		public float	GetArgument() {
+			return (float) Math.Atan2( this.Im, this.Re );
 		}
 
 		//-----------------------------------------------------------------------------------
@@ -157,7 +155,7 @@ namespace Exocortex.DSP {
 		/// Get the conjugate of the complex number
 		/// </summary>
 		/// <returns></returns>
-		public Complex GetConjugate() {
+		public ComplexF GetConjugate() {
 			return FromRealImaginary( this.Re, -this.Im );
 		}
 
@@ -171,8 +169,8 @@ namespace Exocortex.DSP {
 			if( modulus == 0 ) {
 				throw new DivideByZeroException( "Can not normalize a complex number that is zero." );
 			}
-			this.Re	= (double)( this.Re / modulus );
-			this.Im	= (double)( this.Im / modulus );
+			this.Re	= (float)( this.Re / modulus );
+			this.Im	= (float)( this.Im / modulus );
 		}
 
 		//-----------------------------------------------------------------------------------
@@ -181,24 +179,24 @@ namespace Exocortex.DSP {
 		/// <summary>
 		/// Convert to a from double precision complex number to a single precison complex number
 		/// </summary>
-		/// <param name="cF"></param>
+		/// <param name="c"></param>
 		/// <returns></returns>
-		public static explicit operator Complex ( ComplexF cF ) {
-			Complex c;
-			c.Re	= (double) cF.Re;
-			c.Im	= (double) cF.Im;
-			return c;
+		public static explicit operator ComplexF ( Complex c ) {
+			ComplexF cF;
+			cF.Re	= (float) c.Re;
+			cF.Im	= (float) c.Im;
+			return cF;
 		}
 		
 		/// <summary>
 		/// Convert from a single precision real number to a complex number
 		/// </summary>
-		/// <param name="d"></param>
+		/// <param name="f"></param>
 		/// <returns></returns>
-		public static explicit operator Complex ( double d ) {
-			Complex c;
-			c.Re	= (double) d;
-			c.Im	= (double) 0;
+		public static explicit operator ComplexF ( float f ) {
+			ComplexF c;
+			c.Re		= (float) f;
+			c.Im	= (float) 0;
 			return c;
 		}
 
@@ -207,8 +205,8 @@ namespace Exocortex.DSP {
 		/// </summary>
 		/// <param name="c"></param>
 		/// <returns></returns>
-		public static explicit operator double ( Complex c ) {
-			return (double) c.Re;
+		public static explicit operator float ( ComplexF c ) {
+			return (float) c.Re;
 		}
 		
 		//-----------------------------------------------------------------------------------
@@ -220,7 +218,7 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="b"></param>
 		/// <returns></returns>
-		public static bool	operator==( Complex a, Complex b ) {
+		public static bool	operator==( ComplexF a, ComplexF b ) {
 			return	( a.Re == b.Re ) && ( a.Im == b.Im );
 		}
 
@@ -230,7 +228,7 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="b"></param>
 		/// <returns></returns>
-		public static bool	operator!=( Complex a, Complex b ) {
+		public static bool	operator!=( ComplexF a, ComplexF b ) {
 			return	( a.Re != b.Re ) || ( a.Im != b.Im );
 		}
 
@@ -248,8 +246,8 @@ namespace Exocortex.DSP {
 		/// <param name="o"></param>
 		/// <returns></returns>
 		public override bool	Equals( object o ) {
-			if( o is Complex ) {
-				Complex c = (Complex) o;
+			if( o is ComplexF ) {
+				ComplexF c = (ComplexF) o;
 				return   ( this == c );
 			}
 			return	false;
@@ -267,17 +265,17 @@ namespace Exocortex.DSP {
 			if( o == null ) {
 				return 1;  // null sorts before current
 			}
-			if( o is Complex ) {
-				return	this.GetModulus().CompareTo( ((Complex)o).GetModulus() );
-			}
-			if( o is double ) {
-				return	this.GetModulus().CompareTo( (double)o );
-			}
 			if( o is ComplexF ) {
 				return	this.GetModulus().CompareTo( ((ComplexF)o).GetModulus() );
 			}
 			if( o is float ) {
 				return	this.GetModulus().CompareTo( (float)o );
+			}
+			if( o is Complex ) {
+				return	this.GetModulus().CompareTo( ((Complex)o).GetModulus() );
+			}
+			if( o is double ) {
+				return	this.GetModulus().CompareTo( (double)o );
 			}
 			throw new ArgumentException();
 		}
@@ -290,7 +288,7 @@ namespace Exocortex.DSP {
 		/// </summary>
 		/// <param name="a"></param>
 		/// <returns></returns>
-		public static Complex operator+( Complex a ) {
+		public static ComplexF operator+( ComplexF a ) {
 			return a;
 		}
 
@@ -299,7 +297,7 @@ namespace Exocortex.DSP {
 		/// </summary>
 		/// <param name="a"></param>
 		/// <returns></returns>
-		public static Complex operator-( Complex a ) {
+		public static ComplexF operator-( ComplexF a ) {
 			a.Re	= -a.Re;
 			a.Im	= -a.Im;
 			return a;
@@ -311,8 +309,8 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="f"></param>
 		/// <returns></returns>
-		public static Complex operator+( Complex a, double f ) {
-			a.Re	= (double)( a.Re + f );
+		public static ComplexF operator+( ComplexF a, float f ) {
+			a.Re	= (float)( a.Re + f );
 			return a;
 		}
 
@@ -322,8 +320,8 @@ namespace Exocortex.DSP {
 		/// <param name="f"></param>
 		/// <param name="a"></param>
 		/// <returns></returns>
-		public static Complex operator+( double f, Complex a ) {
-			a.Re	= (double)( a.Re + f );
+		public static ComplexF operator+( float f, ComplexF a ) {
+			a.Re	= (float)( a.Re + f );
 			return a;
 		}
 
@@ -333,7 +331,7 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="b"></param>
 		/// <returns></returns>
-		public static Complex operator+( Complex a, Complex b ) {
+		public static ComplexF operator+( ComplexF a, ComplexF b ) {
 			a.Re	= a.Re + b.Re;
 			a.Im	= a.Im + b.Im;
 			return a;
@@ -345,8 +343,8 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="f"></param>
 		/// <returns></returns>
-		public static Complex operator-( Complex a, double f ) {
-			a.Re	= (double)( a.Re - f );
+		public static ComplexF operator-( ComplexF a, float f ) {
+			a.Re	= (float)( a.Re - f );
 			return a;
 		}
 
@@ -356,7 +354,7 @@ namespace Exocortex.DSP {
 		/// <param name="f"></param>
 		/// <param name="a"></param>
 		/// <returns></returns>
-		public static Complex operator-( double f, Complex a ) {
+		public static ComplexF operator-( float f, ComplexF a ) {
 			a.Re	= (float)( f - a.Re );
 			a.Im	= (float)( 0 - a.Im );
 			return a;
@@ -368,7 +366,7 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="b"></param>
 		/// <returns></returns>
-		public static Complex operator-( Complex a, Complex b ) {
+		public static ComplexF operator-( ComplexF a, ComplexF b ) {
 			a.Re	= a.Re - b.Re;
 			a.Im	= a.Im - b.Im;
 			return a;
@@ -380,9 +378,9 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="f"></param>
 		/// <returns></returns>
-		public static Complex operator*( Complex a, double f ) {
-			a.Re	= (double)( a.Re * f );
-			a.Im	= (double)( a.Im * f );
+		public static ComplexF operator*( ComplexF a, float f ) {
+			a.Re	= (float)( a.Re * f );
+			a.Im	= (float)( a.Im * f );
 			return a;
 		}
 		
@@ -392,10 +390,9 @@ namespace Exocortex.DSP {
 		/// <param name="f"></param>
 		/// <param name="a"></param>
 		/// <returns></returns>
-		public static Complex operator*( double f, Complex a ) {
-			a.Re	= (double)( a.Re * f );
-			a.Im	= (double)( a.Im * f );
-			
+		public static ComplexF operator*( float f, ComplexF a ) {
+			a.Re	= (float)( a.Re * f );
+			a.Im	= (float)( a.Im * f );
 			return a;
 		}
 		
@@ -405,14 +402,12 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="b"></param>
 		/// <returns></returns>
-		public static Complex operator*( Complex a, Complex b ) {
+		public static ComplexF operator*( ComplexF a, ComplexF b ) {
 			// (x + yi)(u + vi) = (xu – yv) + (xv + yu)i. 
 			double	x = a.Re, y = a.Im;
 			double	u = b.Re, v = b.Im;
-			
-			a.Re	= (double)( x*u - y*v );
-			a.Im	= (double)( x*v + y*u );
-			
+			a.Re	= (float)( x*u - y*v );
+			a.Im	= (float)( x*v + y*u );
 			return a;
 		}
 
@@ -422,14 +417,12 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="f"></param>
 		/// <returns></returns>
-		public static Complex operator/( Complex a, double f ) {
+		public static ComplexF operator/( ComplexF a, float f ) {
 			if( f == 0 ) {
 				throw new DivideByZeroException();
 			}
-			
-			a.Re	= (double)( a.Re / f );
-			a.Im	= (double)( a.Im / f );
-			
+			a.Re	= (float)( a.Re / f );
+			a.Im	= (float)( a.Im / f );
 			return a;
 		}
 		
@@ -439,7 +432,7 @@ namespace Exocortex.DSP {
 		/// <param name="a"></param>
 		/// <param name="b"></param>
 		/// <returns></returns>
-		public static Complex operator/( Complex a, Complex b ) {
+		public static ComplexF operator/( ComplexF a, ComplexF b ) {
 			double	x = a.Re,	y = a.Im;
 			double	u = b.Re,	v = b.Im;
 			double	denom = u*u + v*v;
@@ -447,10 +440,8 @@ namespace Exocortex.DSP {
 			if( denom == 0 ) {
 				throw new DivideByZeroException();
 			}
-
-			a.Re	= (double)( ( x*u + y*v ) / denom );
-			a.Im	= (double)( ( y*u - x*v ) / denom );
-			
+			a.Re	= (float)( ( x*u + y*v ) / denom );
+			a.Im	= (float)( ( y*u - x*v ) / denom );
 			return a;
 		}
 
@@ -459,8 +450,8 @@ namespace Exocortex.DSP {
 		/// </summary>
 		/// <param name="s"></param>
 		/// <returns></returns>
-		static public Complex Parse( string s ) {
-			throw new NotImplementedException( "Complex Complex.Parse( string s ) is not implemented." );
+		static public ComplexF Parse( string s ) {
+			throw new NotImplementedException( "ComplexF ComplexF.Parse( string s ) is not implemented." );
 		}
 		
 		/// <summary>
@@ -481,7 +472,7 @@ namespace Exocortex.DSP {
 		/// <param name="b"></param>
 		/// <param name="tolerance"></param>
 		/// <returns></returns>
-		static public bool IsEqual( Complex a, Complex b, double tolerance ) {
+		static public bool IsEqual( ComplexF a, ComplexF b, float tolerance ) {
 			return
 				( Math.Abs( a.Re - b.Re ) < tolerance ) &&
 				( Math.Abs( a.Im - b.Im ) < tolerance );
@@ -494,29 +485,29 @@ namespace Exocortex.DSP {
 		/// <summary>
 		/// Represents zero
 		/// </summary>
-		static public Complex	Zero {
-			get	{	return	new Complex( 0, 0 );	}
+		static public ComplexF	Zero {
+			get	{	return	new ComplexF( 0, 0 );	}
 		}
 
 		/// <summary>
 		/// Represents the result of sqrt( -1 )
 		/// </summary>
-		static public Complex	I {
-			get {	return	new Complex( 0, 1 );	}
+		static public ComplexF	I {
+			get {	return	new ComplexF( 0, 1 );	}
 		}
 
 		/// <summary>
-		/// Represents the largest possible value of Complex.
+		/// Represents the largest possible value of ComplexF.
 		/// </summary>
-		static public Complex	MaxValue {
-			get {	return	new Complex( double.MaxValue, double.MaxValue );	}
+		static public ComplexF	MaxValue {
+			get {	return	new ComplexF( float.MaxValue, float.MaxValue );	}
 		}
 
 		/// <summary>
-		/// Represents the smallest possible value of Complex.
+		/// Represents the smallest possible value of ComplexF.
 		/// </summary>
-		static public Complex	MinValue {
-			get {	return	new Complex( double.MinValue, double.MinValue );	}
+		static public ComplexF	MinValue {
+			get {	return	new ComplexF( float.MinValue, float.MinValue );	}
 		}
 
 

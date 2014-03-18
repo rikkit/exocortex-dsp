@@ -1,14 +1,10 @@
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Collections;
-using System.ComponentModel;
 using System.Windows.Forms;
-using System.Data;
+using Exocortex.DSP.NET;
 
-using Exocortex.DSP;
-
-namespace Mandelbrot
+namespace Exocortex.DSP.Demo.Mandlebrot
 {
 	/// <summary>
 	/// Summary description for Form1.

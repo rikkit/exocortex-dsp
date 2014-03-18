@@ -4,24 +4,24 @@
     <ProjectType>Local</ProjectType>
     <ProductVersion>7.10.3077</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}</ProjectGuid>
+    <ProjectGuid>{DFC200D4-60B3-4B82-BE0A-7AE113A084BC}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon />
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
     <AssemblyKeyContainerName />
-    <AssemblyName>Exocortex.DSP.v1</AssemblyName>
+    <AssemblyName>Exocortex.DSP.Demo.Mandlebrot</AssemblyName>
     <AssemblyOriginatorKeyFile />
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Exocortex.DSP</RootNamespace>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Exocortex.DSP.Demo.Mandlebrot</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject />
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>0.0</OldToolsVersion>
@@ -44,17 +44,17 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile />
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>doc\Exocortex.DSP.xml</DocumentationFile>
+    <DocumentationFile />
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
     <NoWarn />
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
@@ -65,12 +65,12 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile />
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>doc\Exocortex.DSP.xml</DocumentationFile>
+    <DocumentationFile />
     <DebugSymbols>false</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -85,44 +85,32 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Exocortex.DSP.NET\Exocortex.DSP.NET.csproj">
+      <Name>Exocortex.DSP.v1</Name>
+      <Project>{1904A41B-D1B8-40E5-ADBB-728DDCF7C816}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
     <Reference Include="System">
       <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
     </Reference>
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.XML</Name>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Complex.cs">
-      <SubType>Code</SubType>
+    <Compile Include="MandelbrotWindow.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComplexArray.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexF.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexMath.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ComplexStats.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Fourier.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FourierDirection.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Content Include="appicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
